@@ -1,0 +1,14 @@
+syntax = "proto3";
+package joncwong.ween.ween;
+
+import "gogoproto/gogo.proto";
+import "ween/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/joncwong/ween/x/ween/types";
+
+// GenesisState defines the ween module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
